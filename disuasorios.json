@@ -1,0 +1,49 @@
+{
+	"parkings": 
+	[{
+		"id": "ceda24a7-7e4e-4e2f-bee1-7a8a2f7c4341",
+		"name": "Trinitários I",
+		"address": "Entre C./Biurdana y Avda de Guipuzkoa",
+		"coords": [42.821583, -1.656845]
+	}, {
+		"id": "e02ae922-8d78-461c-b5f1-89447f4f38ab",
+		"name": "Trinitarios II",
+		"address": "C/Biurdana",
+		"coords": [42.820129, -1.657979]
+	}, {
+		"id": "12ad162e-695c-496f-88d2-c871b40afc44",
+		"name": "Mendebaldea",
+		"address": "C/Arcadio María Larraona glorieta de las calles Ermitagaña y Miluce y avda. Central de Barañain",
+		"coords": [42.808360, -1.675977]
+	}, {
+		"id": "5fe7021e-9306-4a99-a1f4-c5bf0b4f7f20",
+		"name": "San Jorge",
+		"address": "C/Doctor Reparaz",
+		"coords": [42.820872, -1.673777]
+	}, {
+		"id": "231b10d1-2f12-4afc-9d85-c9a296c5a73b",
+		"name": "Arrosadía",
+		"address": "C/ Sebastián Albero",
+		"coords": [42.802866, -1.635640]
+	}, {
+		"id": "87ca72cd-f0b5-4074-b4e6-d4e1689e5700",
+		"name": "Milagrosa (Mochuelo)",
+		"address": "C/Mochuelo",
+		"coords": [42.802023, -1.642137]
+	}, {
+		"id": "17d7a785-f376-4f06-a4da-186d4f068b41",
+		"name": "Milagrosa (Blas de Laserna)",
+		"address": "C/Blas de la Serna",
+		"coords": [42.801737, -1.641565]
+	}, {
+		"id": "12b0dea4-da65-40b3-85ff-4a9f11851a54",
+		"name": "Milagrosa (Río Ultzama)",
+		"address": "C/ Rio Ultzama",
+		"coords": [42.802537, -1.640836]
+	}, {
+		"id": "000d3e69-a830-4edc-afcd-f1aad8b6b10b",
+		"name": "Cardenal Ilundain",
+		"address": "Limita con Trav. Tomás de Burgui, CP Cardenal Ilundain y c/ Ostoki (Ansoáin)",
+		"coords": [42.831374, -1.641903]
+	}]
+}
