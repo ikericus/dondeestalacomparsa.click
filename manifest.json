@@ -1,0 +1,56 @@
+{
+  "name": "Comparsa San Fermín - Gigantes y Cabezudos",
+  "short_name": "Comparsa",
+  "description": "Localiza la comparsa de gigantes y cabezudos de Pamplona en tiempo real durante San Fermín",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#cc3333",
+  "categories": ["entertainment", "travel", "lifestyle"],
+  "lang": "es",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Día 7 - San Fermín",
+      "short_name": "Día 7",
+      "description": "Ver recorrido del 7 de julio",
+      "url": "/?dia=7",
+      "icons": [{ "src": "icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Día de hoy",
+      "short_name": "Hoy",
+      "description": "Ver recorrido de hoy",
+      "url": "/",
+      "icons": [{ "src": "icon.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 480
+  }
+}

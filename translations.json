@@ -1,0 +1,242 @@
+{
+  "cas": {
+    "seo_default_title": "¿Dónde está la Comparsa? - Recorridos Gigantes y Cabezudos San Fermín 2025",
+    "seo_day_title": "Recorrido Comparsa {day} Julio 2025 - Gigantes y Cabezudos San Fermín",
+    "seo_description": "Localiza la comparsa de gigantes y cabezudos de Pamplona en tiempo real durante San Fermín 2025. Recorridos diarios del 6 al 14 de julio con mapa interactivo.",
+    "title": "¿Dónde está la comparsa?",
+    "subtitle": "San Fermín 2025",
+    "day_title": "Recorrido Comparsa {day} Julio",
+    "select_day": "Selecciona el día:",
+    "departure": "Salida",
+    "your_position": "Tu posición",
+    "giants_position": "Posición de la comparsa",
+    "resting_message": "Ahora mismo los gigantes y cabezudos están descansando!",
+    "notifications_activated": "¡Notificaciones activadas!",
+    "notifications_not_supported": "Tu navegador no soporta notificaciones",
+    "geolocation_not_available": "Geolocalización no disponible",
+    "comparsa_departure": "La comparsa sale en 15 minutos",
+    "days_label": "Días:",
+    "route_info": "📍 Recorrido del {day} de julio 2025",
+    "route_label": "🗺️ Recorrido:",
+    "departure_label": "⏰ Salida:",
+    "from": "desde",
+    "day_subtitles": {
+      "6": "Domingo - Primer día de San Fermín",
+      "7": "Lunes - Día de San Fermín",
+      "8": "Martes - Recorrido tradicional", 
+      "9": "Miércoles - Ruta por el casco histórico",
+      "10": "Jueves - Recorrido ampliado",
+      "11": "Viernes - Ruta especial",
+      "12": "Sábado - Zona ensanche",
+      "13": "Domingo - Recorrido extenso",
+      "14": "Lunes - Despedida de San Fermín"
+    },
+    "routes": {
+      "6": {
+        "time": "17:00",
+        "start": "Estación de autobuses",
+        "route": "Plaza de la Paz, Yanguas y Miranda, García Ximénez, Tudela, Plaza del Vínculo, Sarasate, San Ignacio, Francisco Bergamín, Arrieta, Carlos III, Plaza del Castillo, Paseo Sarasate, Navas de Tolosa, Paseo Doctor Arazuri, Recoletas, Plaza Virgen de la O, Santo Andía, San Lorenzo y Mayor, Palacio de Ezpeleta."
+      },
+      "7": {
+        "time": "9:30",
+        "start": "Palacio de Ezpeleta", 
+        "route": "Mayor, San Saturnino y Plaza Consistorial, desde donde acompañará a la Corporación Municipal por Mercaderes y Curia, para recoger al Cabildo de la S.I. Catedral, regresando por Curia, Mercaderes, Plaza Consistorial, San Saturnino y Mayor hasta la iglesia de San Lorenzo, de la que partirá la Procesión de San Fermín, por Taconera, San Antón, Zapatería, Calceteros, Plaza Consistorial, San Saturnino y Mayor (descanso). Al finalizar la ceremonia religiosa acompañará al Cabildo y Corporación Municipal por Mayor, San Saturnino, Plaza Consistorial, Mercaderes y Curia, hasta la Catedral, en cuyo atrio bailará la Comparsa. El regreso de la Corporación Municipal a la Casa Consistorial se realizará por Curia, Mercaderes y Plaza Consistorial. A continuación, se dirigirá por San Saturnino y Mayor hasta el Palacio de Ezpeleta."
+      },
+      "8": {
+        "time": "9:30",
+        "start": "Palacio de Ezpeleta",
+        "route": "Mayor, Eslava, Plaza San Francisco, Plaza del Consejo, Zapatería, Calceteros, Mercaderes, Plaza Consistorial, calle Mayor (descanso en Ezpeleta 11:00). Mayor, calle San Francisco, Eslava, Mayor, Campana, Ansoleaga, San Saturnino, Nueva, Paseo Arazuri, Mayor, Palacio de Ezpeleta."
+      },
+      "9": {
+        "time": "9:30", 
+        "start": "Palacio de Ezpeleta",
+        "route": "Mayor, Eslava, Jarauta, San Saturnino, Plaza Consistorial, Mercaderes, Mañueta, Cuesta del Palacio, Dos de Mayo, Carmen, Navarrería y Plaza San José (descanso en Salsipuedes 11:30). Curia, Mercaderes, Chapitela, Plaza del Castillo, Carlos III, Plaza del Castillo, Paseo Sarasate, San Miguel, Plaza San Francisco, Eslava, Mayor, Palacio de Ezpeleta."
+      },
+      "10": {
+        "time": "9:30",
+        "start": "Palacio de Ezpeleta", 
+        "route": "Mayor, San Lorenzo, Jarauta, Eslava, Plaza San Francisco, San Miguel, San Antón, calle Taconera, Paseo Doctor Arazuri, Mayor (descanso Ezpeleta 11:00). Mayor, San Lorenzo, Descalzos, Jarauta, San Saturnino, Plaza Consistorial, Mercaderes, Estafeta, Duque de Ahumada, Carlos III, Plaza del Castillo, Comedias, San Nicolás, San Miguel, Plaza San Francisco, Eslava, Mayor, Palacio de Ezpeleta."
+      },
+      "11": {
+        "time": "9:30",
+        "start": "Palacio de Ezpeleta",
+        "route": "Mayor, San Lorenzo, Descalzos, Eslava, Jarauta, San Saturnino, Plaza Consistorial, Mercaderes, Calderería, Bajada Javier, Merced, Plaza Santa María La Real (descanso 11:30). Merced, Bajada de Javier, Estafeta, Amaya, Roncesvalles, García Ximénez, Tudela, Conde Oliveto, Plaza de la Paz y Estación de Autobuses."
+      },
+      "12": {
+        "time": "9:30",
+        "start": "Estación de autobuses",
+        "route": "Plaza de la Paz, Conde Oliveto, Tudela, Avda. Zaragoza, Leyre, Bergamín, Arrieta, Amaya, Leyre y Aralar (descanso en Escolapios 11:00). Aralar, Teobaldos, Olite, San Fermín, Bergamín, Avda. Galicia, Plaza de los Fueros y Estación de Autobuses."
+      },
+      "13": {
+        "time": "9:30",
+        "start": "Estación de autobuses",
+        "route": "Plaza de la Paz, Conde Oliveto, Tudela, Avda. Zaragoza, Plaza de los Fueros, Vuelta del Castillo y Casa de la Misericordia, volviendo por Plaza de los Fueros, Yanguas y Miranda, Plaza de la Paz, Yanguas y Miranda, Navas de Tolosa, Paseo Doctor Arazuri, Mayor (descanso en Palacio Ezpeleta 11:30). Mayor, calle San Francisco, Plaza San Francisco, Ansoleaga, San Saturnino, Plaza Consistorial, Mercaderes, Chapitela, Plaza del Castillo, Paseo Sarasate, San Miguel, Plaza San Francisco, calle San Francisco y Mayor, Palacio de Ezpeleta."
+      },
+      "14": {
+        "time": "9:30",
+        "start": "Palacio de Ezpeleta",
+        "route": "Mayor, Eslava, Plaza San Francisco, Plaza del Consejo, Zapatería y Plaza Consistorial. Desde aquí se acompañará a la Corporación Municipal por las calles San Saturnino y Mayor hasta San Lorenzo donde se celebrará la Octava de San Fermín (descanso en la calle Mayor). Acompañamiento a la Corporación por las calles Mayor y San Saturnino hasta la Plaza Consistorial donde se realizarán bailes en honor a la ciudad. Seguidamente, tendrá lugar la despedida de la Comparsa de Gigantes y Cabezudos de Pamplona."
+      }
+    }
+  },
+  "eus": {
+    "seo_default_title": "Non dago Konpartsa? - Erraldoi eta Buruhandien Ibilbideak 2025eko San Ferminetan",
+    "seo_day_title": "Konpartsa Ibilbidea {day} Uztaila 2025 - Erraldoi eta Buruhandiak San Fermin",
+    "seo_description": "Aurkitu Iruñeko erraldoi eta buruhandi konpartsa denbora errealean 2025eko San Ferminetan. Uztailaren 6tik 14ra bitarteko eguneroko ibilbideak mapa interaktiboa dutelarik.",
+    "title": "Non dago konpartsa?",
+    "subtitle": "2025eko San Ferminak", 
+    "day_title": "Konpartsa Ibilbidea {day} Uztaila",
+    "select_day": "Hautatu eguna:",
+    "departure": "Irteera",
+    "your_position": "Zure posizioa",
+    "giants_position": "Konpartsaren posizioa",
+    "resting_message": "Oraintxe erraldoiak eta buru handiak atseden hartzen ari dira!",
+    "notifications_activated": "Jakinarazpenak aktibatuta!",
+    "notifications_not_supported": "Zure nabigatzaileak ez ditu jakinarazpenak onartzen",
+    "geolocation_not_available": "Geokokapena ez dago eskuragarri",
+    "comparsa_departure": "Konpartsa 15 minutu barru ateratzen da",
+    "days_label": "Egunak:",
+    "route_info": "📍 2025eko uztailaren {day}ko ibilbidea",
+    "route_label": "🗺️ Ibilbidea:",
+    "departure_label": "⏰ Irteera:",
+    "from": "hemendik",
+    "day_subtitles": {
+      "6": "Igandea - San Ferminen lehen eguna",
+      "7": "Astelehena - San Fermin eguna", 
+      "8": "Asteartea - Ohiko ibilbidea",
+      "9": "Asteazkena - Ibilbidea alde zaharrean",
+      "10": "Osteguna - Ibilbide zabaldua",
+      "11": "Ostirala - Ibilbide berezia",
+      "12": "Larunbata - Zabalguneko eremua",
+      "13": "Igandea - Ibilbide luzea", 
+      "14": "Astelehena - San Ferminen agurra"
+    },
+    "routes": {
+      "6": {
+        "time": "17:00",
+        "start": "Autobus-geltokia",
+        "route": "Bake pl., Yanguas y Miranda k., Gartzia Ximenez k., Tutera k., Vínculo pl., Sarasate pasealekua, San Ignazio etorb., Francisco Bergamín k., Arrieta k., Karlos III.aren etorb., Gazteluko pl., Sarasate pasealekua, Navas de Tolosa k., Arazuri Doktorearen pasealekua, Errekoleten k., O-ko Andre Maria pl., Sanduandia k., San Lorentzo k., Kale Nagusia eta Ezpeletaren jauregia."
+      },
+      "7": {
+        "time": "09:30",
+        "start": "Ezpeletaren jauregia",
+        "route": "Kale Nagusia, San Saturnino k. eta Udaletxe plaza. Bertatik Konpartsak Udalbatza lagunduko du Mercaderes eta Curia kaleetan barna, Kabildoaren bila, katedraleraino. Itzulera: Curia k., Mercaderes k., Udaletxe pl., San Saturnino k. eta Kale Nagusia, San Lorentzo elizaraino. Bertatik, San Ferminen prozesioa abiatuko da kale hauetan barna: Taconera k., San Anton k., Zapatería k., Calceteros k., Udaletxe pl., San Saturnino k. eta Kale Nagusia (atsedenaldia). Elizkizuna amaitzean Kabildoarekin eta Udalbatzarekin batera joanen dira katedraleraino, kale hauetan barna: Kale Nagusia, San Saturnino k., Udaletxe pl., Mercaderes k. eta Curia k., katedraleraino. Eliz atarian, konpartsak dantzatuko du. Udalbatza Udaletxera itzuliko da, Curia eta Mercaderes kaleetan barna, Udaletxe plazaraino. Gero, Konpartsa Ezpeletaren jauregirantz abiatuko da San Saturnino kalean eta Kale Nagusian barna."
+      },
+      "8": {
+        "time": "09:30",
+        "start": "Ezpeletaren jauregia",
+        "route": "Kale Nagusia, Eslava k., San Frantzisko pl., Kontseiluko pl., Zapatería k., Calceteros k., Mercaderes k., Udaletxe pl., Kale Nagusia (11:00etan, atsedenaldia, Ezpeletan). Kale Nagusia, San Frantzisko k., Eslava k., Kale Nagusia, Campana k., Ansoleaga k., San Saturnino k., Kale Berria, Arazuri Doktorearen pasealekua, Kale Nagusia, Ezpeletaren jauregia."
+      },
+      "9": {
+        "time": "09:30", 
+        "start": "Ezpeletaren jauregia",
+        "route": "Kale Nagusia, Eslava k., Jarauta k., San Saturnino k., Udaletxe plaza, Mercaderes k., Mañueta k., Jauregiko Aldapako k., Maiatzaren Biaren k., Carmen k., Navarrería k. eta San Jose plaza (11:30ean, atsedenaldia, Salsipuedes kalean). Curia k., Mercaderes k., Txapitela k., Gazteluko pl., Karlos III.aren etorb., Gazteluko pl., Sarasate pasealekua, San Migel k., San Frantzisko pl., Eslava k., Kale Nagusia, Ezpeletaren Jauregia."
+      },
+      "10": {
+        "time": "09:30",
+        "start": "Ezpeletaren jauregia",
+        "route": "Kale Nagusia, San Lorentzo k., Jarauta k., Eslava k., San Frantzisko pl., San Migel k., San Anton k., Taconera k., Arazuri Doktorearen pasealekua, Kale Nagusia (11:00etan, atsedenaldia, Ezpeletaren jauregian). Kale Nagusia, San Lorentzo k., Descalzos k., Jarauta k., San Saturnino k., Udaletxe plaza., Mercaderes k., Estafeta k., Ahumada Dukearen k., Karlos III.aren etorb., Gazteluko plaza, Comedias k., San Nikolas k., San Migel k., San Frantzisko plaza, Eslava k., Kale Nagusia eta Ezpeletaren jauregia."
+      },
+      "11": {
+        "time": "09:30",
+        "start": "Ezpeletaren jauregia", 
+        "route": "Kale Nagusia, San Lorentzo k., Descalzos k., Eslava k., Jarauta k., San Saturnino k., Udaletxe pl., Mercaderes k., Calderería k., Xabier k., Merced k., Andre Maria Erreginaren pl. (11:30ean, atsedenaldia). Merced k., Xabier k., Estafeta k., Amaia k., Orreaga etorb., Gartzia Ximenez k., Tutera k., Oliveto Kondearen etorb., Bake pl. eta autobus-geltokia."
+      },
+      "12": {
+        "time": "09:30",
+        "start": "Autobus-geltokia",
+        "route": "Bake pl., Oliveto Kondearen etorb., Tutera k., Zaragozako etorb., Leire k., Bergamín k., Arrieta k., Amaia k., Leire k. eta Aralar k. (11:00etan, atsedenaldia, Escolapiosen). Aralar k., Teobaldoen k., Erriberri k., San Fermin k., Bergamín k., Galizia etorb., Foruen pl. eta autobus-geltokia."
+      },
+      "13": {
+        "time": "09:30", 
+        "start": "Autobus-geltokia",
+        "route": "Bake pl., Oliveto Kondearen etorb., Tutera k., Zaragozako etorb., Foruen pl., Gaztelugibel eta Erruki Etxea. Itzulera: Foruen pl., Yanguas y Miranda k., Bake pl., Yanguas y Miranda k., Navas de Tolosa k., Arazuri Doktorearen pasealekua, Kale Nagusia (11:30ean, atsedenaldia, Ezpeletaren jauregian). Kale Nagusia, San Frantzisko k., San Frantzisko pl., Ansoleaga k., San Saturnino k., Udaletxe pl., Mercaderes k., Txapitela k., Gazteluko pl., Sarasate pasealekua, San Migel k., San Frantzisko pl., San Frantzisko k., Kale Nagusia eta Ezpeletaren jauregia."
+      },
+      "14": {
+        "time": "09:30",
+        "start": "Ezpeletaren jauregia",
+        "route": "Kale Nagusia, Eslava k., San Frantzisko k., Kontseiluko pl., Zapatería k. eta Udaletxe pl. Hortik abiatuta, Konpartsak Udalbatza lagunduko du, San Saturnino kalean eta Kale Nagusian barna, San Lorentzo elizaraino. Han San Ferminen Zortziurrena ospatuko da (atsedenaldia Kale Nagusian). Udalbatza lagunduko du Kale Nagusian eta San Saturnino kalean barna, Udaletxe plazaraino. Bertan, dantza eginen du hiriaren ohoretan. Ondoren, Iruñeko Erraldoi eta Buruhandien Konpartsak agur eginen du."
+      }
+    }
+  },
+  "eng": {
+    "seo_default_title": "Where is the Comparsa? - Giants and Big Heads Routes San Fermín 2025",
+    "seo_day_title": "Comparsa Route July {day} 2025 - Giants and Big Heads San Fermín",
+    "seo_description": "Locate the giants and big heads troupe of Pamplona in real time during San Fermín 2025. Daily routes from July 6 to 14 with interactive map.",
+    "title": "Where is the \"comparsa\"?",
+    "subtitle": "San Fermín 2025",
+    "day_title": "Comparsa Route July {day}",
+    "select_day": "Select the day:",
+    "departure": "Departure", 
+    "your_position": "Your position",
+    "giants_position": "Position of the troupe",
+    "resting_message": "Right now the giants and big heads are resting!",
+    "notifications_activated": "Notifications activated!",
+    "notifications_not_supported": "Your browser doesn't support notifications",
+    "geolocation_not_available": "Geolocation not available",
+    "comparsa_departure": "The troupe leaves in 15 minutes",
+    "days_label": "Days:",
+    "route_info": "📍 Route for July {day}, 2025",
+    "route_label": "🗺️ Route:",
+    "departure_label": "⏰ Departure:",
+    "from": "from",
+    "day_subtitles": {
+      "6": "Sunday - First day of San Fermín",
+      "7": "Monday - San Fermín Day",
+      "8": "Tuesday - Traditional route",
+      "9": "Wednesday - Historic center route", 
+      "10": "Thursday - Extended route",
+      "11": "Friday - Special route",
+      "12": "Saturday - Ensanche area",
+      "13": "Sunday - Extensive route",
+      "14": "Monday - San Fermín farewell"
+    },
+    "routes": {
+      "6": {
+        "time": "17:00",
+        "start": "Bus station",
+        "route": "Plaza de la Paz, Yanguas y Miranda, García Ximénez, Tudela, Plaza del Vínculo, Sarasate, San Ignacio, Francisco Bergamín, Arrieta, Carlos III, Plaza del Castillo, Paseo Sarasate, Navas de Tolosa, Paseo Doctor Arazuri, Recoletas, Plaza Virgen de la O, Santo Andía, San Lorenzo and Mayor, Palacio de Ezpeleta."
+      },
+      "7": {
+        "time": "9:30",
+        "start": "Palacio de Ezpeleta",
+        "route": "Mayor, San Saturnino and Plaza Consistorial, from where it will accompany the Municipal Corporation through Mercaderes and Curia, to collect the Cathedral Chapter, returning through Curia, Mercaderes, Plaza Consistorial, San Saturnino and Mayor to the church of San Lorenzo, from which the San Fermín Procession will depart, through Taconera, San Antón, Zapatería, Calceteros, Plaza Consistorial, San Saturnino and Mayor (rest). Upon completion of the religious ceremony it will accompany the Chapter and Municipal Corporation through Mayor, San Saturnino, Plaza Consistorial, Mercaderes and Curia, to the Cathedral, in whose atrium the Comparsa will dance. The return of the Municipal Corporation to the Consistorial House will be made through Curia, Mercaderes and Plaza Consistorial. It will then proceed through San Saturnino and Mayor to the Palacio de Ezpeleta."
+      },
+      "8": {
+        "time": "9:30", 
+        "start": "Palacio de Ezpeleta",
+        "route": "Mayor, Eslava, Plaza San Francisco, Plaza del Consejo, Zapatería, Calceteros, Mercaderes, Plaza Consistorial, calle Mayor (rest at Ezpeleta 11:00). Mayor, calle San Francisco, Eslava, Mayor, Campana, Ansoleaga, San Saturnino, Nueva, Paseo Arazuri, Mayor, Palacio de Ezpeleta."
+      },
+      "9": {
+        "time": "9:30",
+        "start": "Palacio de Ezpeleta", 
+        "route": "Mayor, Eslava, Jarauta, San Saturnino, Plaza Consistorial, Mercaderes, Mañueta, Cuesta del Palacio, Dos de Mayo, Carmen, Navarrería and Plaza San José (rest at Salsipuedes 11:30). Curia, Mercaderes, Chapitela, Plaza del Castillo, Carlos III, Plaza del Castillo, Paseo Sarasate, San Miguel, Plaza San Francisco, Eslava, Mayor, Palacio de Ezpeleta."
+      },
+      "10": {
+        "time": "9:30",
+        "start": "Palacio de Ezpeleta",
+        "route": "Mayor, San Lorenzo, Jarauta, Eslava, Plaza San Francisco, San Miguel, San Antón, calle Taconera, Paseo Doctor Arazuri, Mayor (rest Ezpeleta 11:00). Mayor, San Lorenzo, Descalzos, Jarauta, San Saturnino, Plaza Consistorial, Mercaderes, Estafeta, Duque de Ahumada, Carlos III, Plaza del Castillo, Comedias, San Nicolás, San Miguel, Plaza San Francisco, Eslava, Mayor, Palacio de Ezpeleta."
+      },
+      "11": {
+        "time": "9:30",
+        "start": "Palacio de Ezpeleta",
+        "route": "Mayor, San Lorenzo, Descalzos, Eslava, Jarauta, San Saturnino, Plaza Consistorial, Mercaderes, Calderería, Bajada Javier, Merced, Plaza Santa María La Real (rest 11:30). Merced, Bajada de Javier, Estafeta, Amaya, Roncesvalles, García Ximénez, Tudela, Conde Oliveto, Plaza de la Paz and Bus Station."
+      },
+      "12": {
+        "time": "9:30", 
+        "start": "Bus station",
+        "route": "Plaza de la Paz, Conde Oliveto, Tudela, Avda. Zaragoza, Leyre, Bergamín, Arrieta, Amaya, Leyre and Aralar (rest at Escolapios 11:00). Aralar, Teobaldos, Olite, San Fermín, Bergamín, Avda. Galicia, Plaza de los Fueros and Bus Station."
+      },
+      "13": {
+        "time": "9:30",
+        "start": "Bus station",
+        "route": "Plaza de la Paz, Conde Oliveto, Tudela, Avda. Zaragoza, Plaza de los Fueros, Vuelta del Castillo and Casa de la Misericordia, returning through Plaza de los Fueros, Yanguas y Miranda, Plaza de la Paz, Yanguas y Miranda, Navas de Tolosa, Paseo Doctor Arazuri, Mayor (rest at Palacio Ezpeleta 11:30). Mayor, calle San Francisco, Plaza San Francisco, Ansoleaga, San Saturnino, Plaza Consistorial, Mercaderes, Chapitela, Plaza del Castillo, Paseo Sarasate, San Miguel, Plaza San Francisco, calle San Francisco and Mayor, Palacio de Ezpeleta."
+      },
+      "14": {
+        "time": "9:30",
+        "start": "Palacio de Ezpeleta",
+        "route": "Mayor, Eslava, Plaza San Francisco, Plaza del Consejo, Zapatería and Plaza Consistorial. From here it will accompany the Municipal Corporation through San Saturnino and Mayor streets to San Lorenzo where the Octave of San Fermín will be celebrated (rest on Mayor street). Accompaniment to the Corporation through Mayor and San Saturnino streets to Plaza Consistorial where dances will be performed in honor of the city. Subsequently, the farewell of the Giants and Big Heads Troupe of Pamplona will take place."
+      }
+    }
+  }
+}

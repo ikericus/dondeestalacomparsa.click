@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Bloquear archivos sensibles
+Disallow: /api.php
+Disallow: /*.log
+Disallow: /validation_*.json
+Disallow: /.env
+Disallow: /config.php
+Disallow: /db.php
+Disallow: /functions.php
+
+# Permitir específicamente recursos importantes
+Allow: /script.js
+Allow: /manifest.json
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.ico
+
+# Sitemap
+Sitemap: https://www.dondeestalacomparsa.click/sitemap.xml
+
+# Crawl-delay para no sobrecargar
+Crawl-delay: 1

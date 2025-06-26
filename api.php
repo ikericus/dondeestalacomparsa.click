@@ -6,12 +6,12 @@ header('Content-Type: application/json');
 
 // Rate limiting simple
 session_start();
-$ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
-if (isset($_SESSION["last_$ip"]) && (time() - $_SESSION["last_$ip"]) < 1) {
-    http_response_code(429);
-    exit(json_encode(['error' => 'Demasiadas peticiones']));
-}
-$_SESSION["last_$ip"] = time();
+// $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+// if (isset($_SESSION["last_$ip"]) && (time() - $_SESSION["last_$ip"]) < 1) {
+//     http_response_code(429);
+//     exit(json_encode(['error' => 'Demasiadas peticiones']));
+// }
+// $_SESSION["last_$ip"] = time();
 
 // Obtener endpoint
 $endpoint = $_SERVER['PATH_INFO'] ?? '';
