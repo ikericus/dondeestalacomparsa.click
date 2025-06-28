@@ -2,16 +2,14 @@
 require_once 'db.php';
 require_once 'functions.php';
 
+// Headers anti-cache
 header('Content-Type: application/json');
+header('Cache-Control: no-cache, no-store, must-revalidate, max-age=0');
+header('Pragma: no-cache');
+header('Expires: Thu, 01 Jan 1970 00:00:00 GMT');
 
 // Rate limiting simple
 session_start();
-// $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
-// if (isset($_SESSION["last_$ip"]) && (time() - $_SESSION["last_$ip"]) < 1) {
-//     http_response_code(429);
-//     exit(json_encode(['error' => 'Demasiadas peticiones']));
-// }
-// $_SESSION["last_$ip"] = time();
 
 // Obtener endpoint
 $endpoint = $_SERVER['PATH_INFO'] ?? '';
@@ -55,6 +53,11 @@ try {
                 exit(json_encode(['status' => 'inactive']));
             }
             
+            // Verificar que tenemos coordenadas
+            if (!isset($_POST['lat']) || !isset($_POST['lon'])) {
+                exit(json_encode(['error' => 'Coordenadas faltantes']));
+            }
+            
             $lat = (float)$_POST['lat'];
             $lon = (float)$_POST['lon'];
             
@@ -62,8 +65,19 @@ try {
                 exit(json_encode(['error' => 'Coordenadas inválidas']));
             }
             
-            DB::insertUserPosition(session_id(), $lat, $lon);
-            echo json_encode(['status' => 'ok']);
+            // Usar session_id() como user_id, o generar uno único
+            $user_id = session_id();
+            if (empty($user_id)) {
+                $user_id = 'anon_' . uniqid();
+            }
+            
+            $success = DB::insertUserPosition($user_id, $lat, $lon);
+            
+            if ($success) {
+                echo json_encode(['status' => 'ok']);
+            } else {
+                echo json_encode(['error' => 'Error insertando posición']);
+            }
         }
         
         else {
@@ -86,10 +100,12 @@ try {
         elseif ($endpoint === '/admin' && isset($_GET['key']) && $_GET['key'] === Config::adminKey()) {
             $estimated = calculateCluster();
             $scheduled = getScheduledPosition();
+            $userPositions = DB::getUserPositions();
             
             $data = [
                 'estimated' => $estimated,
                 'scheduled' => $scheduled,
+                'user_positions' => $userPositions,
                 'distance' => $estimated ? haversineDistance(
                     $estimated['lat'], $estimated['lon'],
                     $scheduled['lat'], $scheduled['lon']

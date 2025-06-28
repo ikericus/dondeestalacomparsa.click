@@ -40,12 +40,14 @@ class Config {
     
     // Horarios San Fermín (solo lo esencial)
     public static function isActive() {
-        $day = (int)date('d');
-        $hour = (int)date('H');
+
+        return true;
+        // $day = (int)date('d');
+        // $hour = (int)date('H');
         
-        // Solo activo 6-14 julio entre 10:00-14:00 y 18:00-21:00
-        return ($day >= 6 && $day <= 14 && 
-               (($hour >= 10 && $hour <= 14) || ($hour >= 18 && $hour <= 21)));
+        // // Solo activo 6-14 julio entre 10:00-14:00 y 18:00-21:00
+        // return ($day >= 6 && $day <= 14 && 
+        //        (($hour >= 10 && $hour <= 14) || ($hour >= 18 && $hour <= 21)));
     }
 }
 

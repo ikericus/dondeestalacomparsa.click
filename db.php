@@ -60,7 +60,19 @@ class DB {
     
     public static function getUserPositions() {
         $conn = self::connect();
-        $result = $conn->query("SELECT lat, lon, timestamp FROM user_positions WHERE timestamp > DATE_SUB(NOW(), INTERVAL 5 MINUTE)");
+        // Solo la posición más reciente de cada usuario en los últimos 5 minutos
+        $result = $conn->query("
+            SELECT lat, lon, timestamp, user_id
+            FROM user_positions up1
+            WHERE timestamp > DATE_SUB(NOW(), INTERVAL 5 MINUTE)
+            AND timestamp = (
+                SELECT MAX(timestamp) 
+                FROM user_positions up2 
+                WHERE up2.user_id = up1.user_id 
+                AND up2.timestamp > DATE_SUB(NOW(), INTERVAL 5 MINUTE)
+            )
+            ORDER BY timestamp DESC
+        ");
         return $result->fetch_all(MYSQLI_ASSOC);
     }
     

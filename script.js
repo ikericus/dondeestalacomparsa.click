@@ -11,6 +11,7 @@ var yourPositionPopup;
 var giantsPositionPopup;
 var restingMessage;
 var watchID;
+var userTrackingActive = false;
 
 var centro = [42.81690537406873, -1.6432940644729581];
 
@@ -110,10 +111,15 @@ function getGiantPosition() {
 }
 
 // Obtener posición programada
-function getScheduledPosition() {
+function getScheduledPosition(specificDate = null) {
+    const dateToUse = specificDate || new Date().toISOString();
+    
+    // Si tenemos fecha específica, extraer el día de ella, sino usar getDay()
+    const dayToUse = specificDate ? new Date(specificDate).getDate() : getDay();
+    
     request('api.php/position', 'POST', { 
-        day: getDay(), 
-        date: new Date().toISOString()
+        day: dayToUse, 
+        date: dateToUse
     }, function(data) {
         if (data && data.lat && data.lon) {
             moveGiantMarker(Number(data.lat), Number(data.lon));
@@ -127,12 +133,114 @@ function getScheduledPosition() {
 function sendUserPositionForClustering(lat, lon) {
     request('api.php/user_position', 'POST', {lat: lat, lon: lon}, 
         function(data) {
-            console.log('Posición enviada para clustering');
+            // Silencioso - sin logs
         }, 
         function(error) {
-            console.log('Error enviando posición:', error);
+            // Silencioso - sin logs
         }
     );
+}
+
+// Suscribirse a la posición del usuario
+function subscribeUserPosition() {
+    if (!navigator.geolocation) {
+        alert('Tu navegador no soporta geolocalización');
+        return;
+    }
+    
+    if (userTrackingActive) {
+        // Detener tracking
+        if (watchID) {
+            navigator.geolocation.clearWatch(watchID);
+            watchID = null;
+        }
+        if (userMarker) {
+            map.removeLayer(userMarker);
+            userMarker = null;
+        }
+        userTrackingActive = false;
+        return;
+    }
+    
+    // Si no está activo, iniciarlo manualmente (igual que autoLocateUser pero con alertas)
+    userTrackingActive = true;
+    
+    // Posición inicial
+    navigator.geolocation.getCurrentPosition(
+        function(position) {
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
+            
+            // Enviar para clustering
+            sendUserPositionForClustering(lat, lon);
+            
+            // Mostrar marcador
+            if (userMarker) {
+                userMarker.setLatLng([lat, lon]);
+            } else {
+                userMarker = L.marker([lat, lon], {
+                    icon: L.icon({
+                        iconUrl: 'user.png',
+                        iconSize: [32, 32],
+                        popupAnchor: [0, -15]
+                    })
+                }).addTo(map);
+                
+                if (yourPositionPopup) {
+                    userMarker.bindPopup(yourPositionPopup);
+                }
+            }
+            
+            setCenterAndZoom();
+        },
+        function(error) {
+            alert('Error obteniendo tu ubicación: ' + error.message);
+            userTrackingActive = false;
+        },
+        {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 30000
+        }
+    );
+    
+    // Tracking continuo
+    if (!watchID) {
+        watchID = navigator.geolocation.watchPosition(
+            function(position) {
+                var lat = position.coords.latitude;
+                var lon = position.coords.longitude;
+                
+                // Enviar para clustering
+                sendUserPositionForClustering(lat, lon);
+                
+                // Actualizar marcador
+                if (userMarker) {
+                    userMarker.setLatLng([lat, lon]);
+                }
+            },
+            function(error) {
+                // Error silencioso en tracking continuo
+            },
+            {
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 60000
+            }
+        );
+    }
+}
+
+// Suscribirse a la posición de los gigantes
+function subscribeGiantPosition() {
+    getGiantPosition();
+    
+    // Actualizar cada 30 segundos
+    setInterval(() => {
+        if (document.hasFocus()) {
+            getGiantPosition();
+        }
+    }, 30000);
 }
 
 // Establecer centro y zoom del mapa
@@ -235,6 +343,121 @@ function addGiantsLocalizationControl() {
     control.addTo(map);
 }
 
+// Auto-localización del usuario al cargar la página
+function autoLocateUser() {
+    if (!navigator.geolocation) {
+        return; // Sin geolocalización disponible
+    }
+    
+    // Intentar obtener posición inicial automáticamente
+    navigator.geolocation.getCurrentPosition(
+        function(position) {
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
+            
+            // Enviar para clustering (silencioso)
+            sendUserPositionForClustering(lat, lon);
+            
+            // Mostrar marcador del usuario
+            if (userMarker) {
+                userMarker.setLatLng([lat, lon]);
+            } else {
+                userMarker = L.marker([lat, lon], {
+                    icon: L.icon({
+                        iconUrl: 'user.png',
+                        iconSize: [32, 32],
+                        popupAnchor: [0, -15]
+                    })
+                }).addTo(map);
+                
+                if (yourPositionPopup) {
+                    userMarker.bindPopup(yourPositionPopup);
+                }
+            }
+            
+            // Activar tracking automático
+            userTrackingActive = true;
+            
+            // Centrar mapa incluyendo la posición del usuario
+            setCenterAndZoom();
+            
+            // Iniciar tracking continuo
+            if (!watchID) {
+                watchID = navigator.geolocation.watchPosition(
+                    function(position) {
+                        var lat = position.coords.latitude;
+                        var lon = position.coords.longitude;
+                        
+                        // Enviar para clustering
+                        sendUserPositionForClustering(lat, lon);
+                        
+                        // Actualizar marcador
+                        if (userMarker) {
+                            userMarker.setLatLng([lat, lon]);
+                        }
+                    },
+                    function(error) {
+                        // Error silencioso en tracking continuo
+                    },
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 10000,
+                        maximumAge: 60000
+                    }
+                );
+            }
+        },
+        function(error) {
+            // Error silencioso - el usuario puede activar manualmente si quiere
+            // No mostrar alertas molestas al cargar la página
+        },
+        {
+            enableHighAccuracy: true,
+            timeout: 8000,
+            maximumAge: 300000 // 5 minutos de cache
+        }
+    );
+}
+
+// Auto-tracking para clustering
+function startAutoUserTracking() {
+    if (navigator.geolocation) {
+        // Enviar posición inicial
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                sendUserPositionForClustering(position.coords.latitude, position.coords.longitude);
+            },
+            function(error) {
+                // Error silencioso
+            },
+            {
+                enableHighAccuracy: false,
+                timeout: 5000,
+                maximumAge: 120000
+            }
+        );
+        
+        // Enviar cada minuto
+        setInterval(() => {
+            if (document.hasFocus() && !document.hidden) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        sendUserPositionForClustering(position.coords.latitude, position.coords.longitude);
+                    },
+                    function(error) {
+                        // Error silencioso
+                    },
+                    {
+                        enableHighAccuracy: false,
+                        timeout: 5000,
+                        maximumAge: 120000
+                    }
+                );
+            }
+        }, 60000); // Cada 1 minuto
+    }
+}
+
 // Inicialización
 function init() {
     map = L.map('map');
@@ -248,35 +471,21 @@ function init() {
     addUserLocalizationControl();
     addGiantsLocalizationControl();
     
-    // Auto-tracking de usuarios para clustering
-    startAutoUserTracking();
-}
-
-// Auto-tracking para clustering (sin mostrar marcador)
-function startAutoUserTracking() {
-    if (navigator.geolocation) {
-        setInterval(() => {
-            if (document.hasFocus()) {
-                navigator.geolocation.getCurrentPosition(position => {
-                    sendUserPositionForClustering(position.coords.latitude, position.coords.longitude);
-                }, error => {
-                    console.log('Error geolocalización:', error);
-                });
-            }
-        }, 120000); // Cada 2 minutos
-    }
+    // Iniciar geolocalización automática del usuario
+    setTimeout(() => {
+        autoLocateUser();
+        startAutoUserTracking();
+    }, 1000);
 }
 
 // Iniciar cuando cargue la página
 window.onload = init;
 
-// Registrar Service Worker al final de script.js
+// Registrar Service Worker
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
             .then(registration => {
-                console.log('SW registrado con éxito:', registration.scope);
-                
                 // Manejar actualizaciones
                 registration.addEventListener('updatefound', () => {
                     const newWorker = registration.installing;
@@ -291,18 +500,16 @@ if ('serviceWorker' in navigator) {
                 });
             })
             .catch(error => {
-                console.log('Error registrando SW:', error);
+                // Error silencioso
             });
     });
 }
 
 // Detectar cuando la app está funcionando offline
 window.addEventListener('online', () => {
-    console.log('Conexión restaurada');
-    // Opcional: mostrar notificación
+    // Reconexión
 });
 
 window.addEventListener('offline', () => {
-    console.log('Sin conexión - modo offline');
-    // Opcional: mostrar banner de offline
+    // Sin conexión
 });
